@@ -2,22 +2,17 @@
 import { extend, useLoader } from "@react-three/fiber";
 import { shaderMaterial, useTexture } from "@react-three/drei";
 import * as THREE from 'three'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-import vertexShaderFirst from './shaders/first/vertex.js'
 import fragmentShaderFirst from './shaders/first/fragment.js'
 
 
-import vertexShaderSecond from './shaders/second/vertex.js'
 import fragmentShaderSecond from './shaders/second/fragment.js'
 
-import vertexShaderThird from './shaders/third/vertex.js'
 import fragmentShaderThird from './shaders/third/fragment.js'
 
-import vertexShaderFourth from './shaders/fourth/vertex.js'
 import fragmentShaderFourth from './shaders/fourth/fragment.js'
 
-
+import vertexShader from './shaders/shared/vertex.js'
 
 
 
@@ -30,7 +25,7 @@ const FirstMaterial = shaderMaterial(
       uTexture: null
       
     },
-    vertexShaderFirst,
+    vertexShader,
     fragmentShaderFirst
   );
   
@@ -50,7 +45,7 @@ const FirstMaterial = shaderMaterial(
    
       
     },
-    vertexShaderSecond,
+    vertexShader,
     fragmentShaderSecond
   );
   
@@ -71,7 +66,7 @@ const FirstMaterial = shaderMaterial(
    
       
     },
-    vertexShaderThird,
+    vertexShader,
     fragmentShaderThird
   );
   
@@ -93,7 +88,7 @@ const FirstMaterial = shaderMaterial(
    
       
     },
-    vertexShaderFourth,
+    vertexShader,
     fragmentShaderFourth
   );
   

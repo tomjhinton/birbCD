@@ -83,7 +83,7 @@ for (var row = 0; row < numRows; row++) {
                 }}
                 onPointerOver={ ()=>  document.body.style.cursor = 'pointer'}
 onPointerLeave={ ()=>  document.body.style.cursor = 'auto'}>
-            <Box  >
+            <Box  args={[1, 1, 1, 3, 3, 3]}   >
            {x.material == "first" && <firstMaterial side={THREE.DoubleSide} ref={x.matRef} />}
            {x.material == "second" && <secondMaterial side={THREE.DoubleSide} ref={x.matRef} />}
            {x.material == "third" && <thirdMaterial side={THREE.DoubleSide} ref={x.matRef} />}
